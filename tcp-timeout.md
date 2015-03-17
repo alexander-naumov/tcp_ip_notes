@@ -7,6 +7,10 @@ There are 4 kind of timeout used in TCP
 3. Keepalive timeout: restart when a segment is send or received. Is used to prevent half open (see also [tcp half close](tcp-half-close.md)) when connection is idle for long time
 4. 2xMSL - Maximum Segment Life: start when state is TIMEWAIT
 
+**Persist timeout**
+
+When a sender want to send data and windows size of the receiver is 0, then the sender keep sending probe to receiver at each retransmission interval to prevent dead lock when segment of windows size from receiver is lost.
+
 **Keepalive Timeout**
 
 Keepalive timeout is controled by
