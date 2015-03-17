@@ -1,4 +1,4 @@
-## TCP Window Scaling if one side does not support window scaling
+## TCP Window Scaling 
 
 **Definition**
 
@@ -14,10 +14,12 @@ As the communication is bi directional the Sender or Receiver can be the Origina
 **Overview**
 
 Every TCP packet includes, in the header, a "window" field which specifies how much data the system which sent the packet is willing and able to receive from the other end. 
+
 The window is the flow control mechanism used by TCP; it controls the maximum amount of data which can be "in flight" between two communicating systems and keeps one side from overwhelming the other with data.
+
 In order to increase receive window size of 16 bits, the TCP Window Scaling was introduced in RFC 1323. 
 
-This is an option of TCP header. The scaling factor is 1 byte but standard mandates that we can use the value only up to 14.
+This is an option of TCP header. The scaling factor is 1 byte but standard mandates that we can use the value only up to 14. This allows windows size up to 2**30 bytes.
 
         void tcp_parse_options(const struct sk_buff *skb, struct tcp_options_received *opt_rx,
                        const u8 **hvpp, int estab)
@@ -222,6 +224,7 @@ direction to `0`
         5650
         ...
 
+
 **Problem with middleman**
 
 In case someone in the middle modify the window scaling option e.g. instead of forwarding segment without window scaling 
@@ -234,3 +237,4 @@ the sending scaling windows is `0` while the Originator thinks that it is the pr
 
 * http://lwn.net/Articles/92727/
 * http://lxr.linux.no/
+* https://www.ietf.org/rfc/rfc1323.txt
