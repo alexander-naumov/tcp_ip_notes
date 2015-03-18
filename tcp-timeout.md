@@ -14,7 +14,7 @@ Retransmission interval is estimated using estimated RTT - Round Trip Time. Init
     RTT = a*RTT + (1 - a)*SampleRTT where 0 < a < 1
     RTO = 2*RTT
 
-To be more robust on variability of RTT, the new method to calculate RTO is introduced using deviation of SampleRTT
+To be more robust on variability of RTT, the new method to calculate RTO is introduced. In addition to estimated RTT calculated as before, the deviation of SampleRTT and subseqyuently RTO is calculated as follow
 
     SampleDev = |SampleRTT − RTT|
     Deviation = b*Deviation + (1 - b)*SampleDev where 0 < b < 1
