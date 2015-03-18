@@ -13,4 +13,4 @@ An example for half close is one party sends text file as stream to other remote
 After sending data, it 'half' closes the connection to indicate other side to start sort but keep reverse comunication direction
 open to receive the result. 
 
-Notes that this is not the same as half open, which is erroneous state, when one end has closed or aborted the connection without the knowledge of the other end because e.g. it crahed. 
+Notes that this is not the same as half open, which is erroneous state, when one end has closed or aborted the connection without acknowledge other end because e.g. it crashed. 
