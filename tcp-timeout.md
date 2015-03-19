@@ -18,7 +18,7 @@ Note that TCP acknowledgement is cummulative so measured `SampleRTT` is bigger t
 
 1. Doubles `RTO`
 2. Stops recording `SampleRTT`
-3. Uses the doubled Timeout as `RTT` when things resume
+3. Uses the doubled `RTO` as `RTT` when things resume
 
 To be more robust on variability of `RTT`, the new method to calculate `RTO` is introduced. In addition to estimated `RTT` calculated as before, the deviation of `SampleRTT` and subseqyuently `RTO` is calculated as follow
 
