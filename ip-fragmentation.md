@@ -1,4 +1,4 @@
-## Understanding
+## IP Fragmentation
 
 IP packet can be fragmented when passing network with smaller MTU than required by the payload. This a fragment can be further
 fragemented and so all. 
