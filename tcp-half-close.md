@@ -1,4 +1,4 @@
-## Understanding
+## TCP half close
 
 TCP half close is term to describe situation that one end closes one direction of the communication channel (from it side), 
 usually by sending `FIN` to other side. Upon receive `ACK` for that, it no longer sends any data but still can receive data from other.
