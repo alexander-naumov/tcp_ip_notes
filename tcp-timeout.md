@@ -28,7 +28,7 @@ To be more robust on variability of `RTT`, the new method to calculate `RTO` is 
  
 **Persist timeout**
 
-When a sender want to send data and windows size of the receiver is 0, then the sender keep sending probe to receiver at each retransmission interval to prevent dead lock when segment of windows size from receiver is lost.
+When a sender want to send data and windows size of the receiver is 0, then the sender keep sending probe to receiver at each retransmission timeout - `RTO` to prevent dead lock when segment of windows size from receiver is lost.
 
 **Keepalive Timeout**
 
