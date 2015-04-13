@@ -21,7 +21,7 @@ packets are lost or simply out of order.
 In tcpdump output we can see `TS` - time stamp and `ECR` - echo timestamp
 
     15:14:30.953063 IP (tos 0x0, ttl 64, id 34782, offset 0, flags [DF], proto TCP (6), length 52)
-    172.30.187.223.47313 > proxy-gerrit02.aws.wonga.com.29418: Flags [.], cksum 0xc8d7 (incorrect -> 0xe1fd), seq 2643, ack 1694, win 176, options [nop,nop,TS val 8227943 ecr 1862588564], length 0
+    172.30.187.223.47313 > proxy.aws.aaa.com.29418: Flags [.], cksum 0xc8d7 (incorrect -> 0xe1fd), seq 2643, ack 1694, win 176, options [nop,nop,TS val 8227943 ecr 1862588564], length 0
     
 References
 
