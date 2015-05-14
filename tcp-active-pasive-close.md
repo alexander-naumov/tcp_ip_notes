@@ -1,4 +1,5 @@
 ## TCP active vs passive close
 
-Either one of parties participated in TCP connection can close TCP socket by doing that it send `FIN` segment to other and 
-follow active close path in closing connection. Other will follow passive close path.
+Parties participated in TCP session can close direction of communication by sending `FIN` segment to other. To fully close TCP session both parties have to do so. Party sending the `FIN` segment before receiving `FIN` from other follows active close path. Party sending `FIN` after receiving `FIN` from other follows passive close path.
+
+see [tcp half close](tcp-half-close.md)
